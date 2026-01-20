@@ -16,3 +16,8 @@
 - terraform/ : infra code
 - lambda/    : weekly report lambda
 - docs/      : screenshots + setup notes
+
+## Final Result (after deploy)
+- SNS email subscription confirmed
+- Lambda generated weekly cost report successfully
+- Report JSON stored in S3 under /reports/
