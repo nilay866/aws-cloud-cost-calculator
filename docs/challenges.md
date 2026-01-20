@@ -1,20 +1,15 @@
+# Challenges I Faced
 
-## GitHub push blocked (large files + push protection)
-**Problem:**
-My first push failed because I accidentally committed generated files like:
-- Terraform provider folder (.terraform)
-- zipped build files
-- AWS CLI installer files
+1) GitHub push failed due to large generated files
+- terraform/.terraform providers and zip files got committed by mistake
+Fix:
+- Added .gitignore
+- Removed large files from git history and pushed again
 
-GitHub also blocked one commit because an example file inside AWS CLI contained a secret-like string.
+2) SNS subscription pending confirmation
+Fix:
+- Confirmed subscription from Gmail
 
-**Fix:**
-- Added .gitignore for terraform generated files and zip files
-- Removed large files from git history using git filter-repo
-- Force pushed cleaned history
-
-**Lesson:**
-Always ignore generated files:
-- terraform/.terraform/
-- terraform.tfstate
-- *.zip
+3) iPad editing issues
+Fix:
+- Used EOF (heredoc) method to create files from terminal

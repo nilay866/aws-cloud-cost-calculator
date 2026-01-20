@@ -1,8 +1,14 @@
 # Verification Checklist
 
-What I verified after terraform apply:
+After deployment I verified:
+- SNS subscription confirmed (email confirmed)
+- Terraform apply completed successfully
+- Lambda invoked successfully using CLI
+- Weekly report JSON created in S3 under reports/
 
-- SNS subscription confirmed (email received)
-- Lambda invocation successful (aws lambda invoke worked)
-- Weekly report JSON visible in S3 reports folder
-- Terraform outputs printed correct values
+Quick commands:
+cd terraform
+LAMBDA=$(terraform output -raw lambda_name)
+BUCKET=$(terraform output -raw s3_bucket)
+aws lambda invoke --function-name "$LAMBDA" out.json
+aws s3 ls "s3://$BUCKET/reports/"
