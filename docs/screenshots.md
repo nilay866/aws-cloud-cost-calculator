@@ -1,14 +1,7 @@
 # Screenshots
 
-Upload screenshots in docs/images and add them here.
+## 1) Lambda Run + S3 Report Proof
+![Lambda + S3 proof](images/lambda-s3-proof.png)
 
-Suggested screenshots:
-1) terraform apply success output
-2) SNS confirmation email
-3) Lambda invoke output (terminal)
-4) S3 reports listing (terminal)
-
-Example:
-![terraform apply](images/terraform-apply.png)
-![sns confirmation](images/sns-confirmation.png)
-![s3 reports](images/s3-reports.png)
+## 2) SNS Email Notification Proof
+![SNS email proof](images/sns-email-proof.png)
